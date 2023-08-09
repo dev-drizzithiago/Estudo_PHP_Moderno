@@ -8,9 +8,11 @@
 </head>
 <body>
     <h1>Exercicio_002</h1>
+    <p>
     <?php 
         date_default_timezone_set("America/Sao_Paulo");
         echo "<p> hoje é dia ". date("D - d/M/Y"). " e a hora atual é ". date("G:i:s T"). "</p>";    
     ?>
+    </p>
 </body>
 </html>
