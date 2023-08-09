@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos Primitivos PHP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <p>
     <?php 
         $num_d = (int) 300.5;
         $num_h = 0x2f;
@@ -29,5 +31,6 @@
         $p = new Pessoa;
         var_dump($p);
     ?>    
+    </p>
 </body>
 </html>
