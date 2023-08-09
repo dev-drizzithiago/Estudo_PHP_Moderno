@@ -13,9 +13,10 @@
     <main>
         <p>
         <?php 
-            $nome = assert($_GET["nome"])?$_GET["nome"]:"<desconhecido>";
-            $sobrenome = assert($_GET["sobrenome"])?$_GET["sobrenome"]:"<desconhecido>";
-            echo "$nome $sobrenome"
+            $nome = isset($_GET["nome"])?$_GET["nome"]:"<desconhecido>";
+            $sobrenome = isset($_GET["sobrenome"])?$_GET["sobrenome"]:"<desconhecido>";
+            echo "$nome $sobrenome";
+            var_dump($_GET);
         ?>
         </p>
     </main>
