@@ -12,10 +12,16 @@ body {
 h1 {
     color: white;
     text-shadow: 2px 2px 2px black;
-    border: 2px solid rgb(7, 0, 0);
-    margin: 40%;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    border: 1px solid rgb(7, 0, 0);
+    text-align: center;
+    margin: 10px auto;
+}
+
+p {
+    color: white;
+    text-shadow: 2px 2px black;
+    border: 1px solid black;
+    text-align: center;
+    padding: 50px;
+
 }
