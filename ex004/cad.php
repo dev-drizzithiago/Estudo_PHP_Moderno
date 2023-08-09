@@ -15,11 +15,11 @@
         <?php 
             $nome = isset($_GET["nome"])?$_GET["nome"]:"<desconhecido>";
             $sobrenome = isset($_GET["sobrenome"])?$_GET["sobrenome"]:"<desconhecido>";
-            echo "$nome $sobrenome";
+            echo "É um prazer te conhecer $nome $sobrenome";
             var_dump($_GET);
         ?>
         </p>
     </main>
-    <a href="./index.html">Voltar</a>    
+    <p><a href="javascript:history.go(-1)">Voltar</a></p>    
 </body>
 </html>
