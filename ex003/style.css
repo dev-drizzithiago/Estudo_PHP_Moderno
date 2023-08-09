@@ -1,0 +1,14 @@
+@charset "UTF-8";
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: brown;
+}
+
+p {
+    background-color: grey;
+    border: 1px solid black;
+}
