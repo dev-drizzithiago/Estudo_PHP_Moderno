@@ -10,15 +10,13 @@
     <header>
         <h1>Resultado do processamento</h1>
     </header>
-    <main>
-        <p>
+    <main>        
         <?php 
-            $nome = isset($_GET["nome"])?$_GET["nome"]:"<desconhecido>";
-            $sobrenome = isset($_GET["sobrenome"])?$_GET["sobrenome"]:"<desconhecido>";
-            echo "É um prazer te conhecer $nome $sobrenome";
-            var_dump($_GET);
-        ?>
-        </p>
+            $nome = $_GET["nome"] ?? "desconhecido";
+            $sobrenome = $_GET["sobrenome"] ?? "desconhecido";
+            echo "<p>É um prazer te conhecer $nome $sobrenome</p>";
+            //var_dump($_GET);
+        ?>        
     </main>
     <p><a href="javascript:history.go(-1)">Voltar</a></p>    
 </body>
