@@ -1,0 +1,11 @@
+@charset "utf-8";
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+h1 {
+
+    margin: auto;
+    text-align: center;
+}
