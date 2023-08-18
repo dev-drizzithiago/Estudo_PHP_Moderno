@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-    <h1>Sala de Cinema</h1>
-    
+    <h1>Sala de Cinema</h1>    
 </body>
 </html>
