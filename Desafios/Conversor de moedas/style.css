@@ -11,3 +11,14 @@ p {
     letter-spacing: 2px;
 }
 
+a {
+    color: chocolate;
+    font-size: 10pt;
+    text-align: right;
+    text-shadow: 1px 1px 1px rgb(5, 253, 100);
+}
+
+a:hover {
+    color: black;
+    text-decoration: line-through;
+}
