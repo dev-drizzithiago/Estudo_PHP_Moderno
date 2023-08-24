@@ -12,7 +12,12 @@
             echo "<p> O valor de R$ $valor_real em U$". number_format($valor_usa, 2, ',', ''). "</p>";       
         ?>
         </br>
-        <a href="index.html" id="idbotao">Voltar</a>
-        <a href="https://www.google.com/finance/quote/USD-BRL?sa=X&ved=2ahUKEwjW65Sr9vOAAxVEq5UCHdzDBGUQmY0JegQIBhAr" target="self">Fonte</a>
+        <form action="index.html" class="voltar">
+            <p><input type="submit" value="Voltar" idbotao></p>
+        </form>
+        <a href="https://www.google.com/finance/quote/USD-BRL?sa=X&ved=2ahUKEwjW65Sr9vOAAxVEq5UCHdzDBGUQmY0JegQIBhAr" target="_self">
+            <p><input type="submit" value="Fonte"></p>
+        </a>
+        
 </body>
 </html>
