@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
 <body>
+    <main>
        <?php
             $valor_real = (float) $_GET["moeda"] ?? '0';            
             $valor_usa = $valor_real / 4.86;            
@@ -18,6 +19,6 @@
         <a href="https://www.google.com/finance/quote/USD-BRL?sa=X&ved=2ahUKEwjW65Sr9vOAAxVEq5UCHdzDBGUQmY0JegQIBhAr" target="_self">
             <p><input type="submit" value="Fonte"></p>
         </a>
-        
+    </main>
 </body>
 </html>
