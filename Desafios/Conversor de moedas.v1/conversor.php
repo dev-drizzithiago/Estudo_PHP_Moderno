@@ -9,9 +9,10 @@
 <main>
         <h1> Convertendo REAL EM DOLAR </h1>
         <?php
-            $valor_real = (float) $_GET["moeda"] ?? '0';            
-            $valor_usa = $valor_real / 4.86;            
-            echo "<p> O valor de R$ $valor_real em U$". number_format($valor_usa, 2, ',', ''). "</p>";       
+            $valor_real = $_GET["moeda"] ?? 0;
+            $valor_base = $_REQUEST["base"] ?? 0;
+            $valor_usa = $valor_real / $valor_base;            
+            echo "<p class='eco'> O valor de R$ $valor_real em U$". number_format($valor_usa, 2, ',', ''). "</p>";
         ?>
         </br>
         <button onclick="javascript:window.location.href='index.html'">Voltar</button>
