@@ -22,3 +22,11 @@ p {
 }
 
 
+a {
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+a:hover {
+    color: rgb(2, 31, 31);
+}
