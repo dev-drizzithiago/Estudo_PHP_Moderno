@@ -10,7 +10,7 @@
 <main>
     <?php
         // Pega o valor digitado pelo usuário, direto do formulario.
-        $valor_moeda = $_REQUEST["moeda"] ?? 0.00;
+        $valor_moeda = $_REQUEST["moeda"] ?? 1;
 
         // Busca a cotação do banco central
         $data_inicio = date("m-d-Y", strtotime("-7 days"));
@@ -20,15 +20,14 @@
         //var_dump($dados);
         $cotacao = $dados["value"][0]['cotacaoCompra'];
         echo "O valor da cotação do dia é R$". number_format($cotacao, 2, ",", "."). "</br>";
-
         //Biblioteco internallizarions PHP
         $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
 
         $valor_do_dolar = $valor_moeda / $cotacao;
-        echo "O valor de ". numfmt_format_currency($padrao, $valor_moeda, "BRL"). " em U$ é de: ". numfmt_format_currency($padrao, $valor_do_dolar, "USD");
+        echo "O valor de ". numfmt_format_currency($padrao, $valor_moeda, "BRL"). " em U$ é de: ". numfmt_format_currency($padrao, $valor_do_dolar, "USD");        
     ?>    
+    </br>
+        <p><i><a class="voltar" href="index.html">Voltar!</a></i></p>
 </main>
-</br>
-<a href="index.html" class="voltar">Voltar!</a>
 </body>
 </html>
