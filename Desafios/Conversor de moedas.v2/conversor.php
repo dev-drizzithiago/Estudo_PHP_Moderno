@@ -26,8 +26,9 @@
 
         $valor_do_dolar = $valor_moeda / $cotacao;
         echo "O valor de ". numfmt_format_currency($padrao, $valor_moeda, "BRL"). " em U$ é de: ". numfmt_format_currency($padrao, $valor_do_dolar, "USD");
-
-    ?>
+    ?>    
 </main>
+</br>
+<a href="index.html" class="voltar">Voltar!</a>
 </body>
 </html>
