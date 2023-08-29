@@ -8,11 +8,11 @@
 </head>
 <body>
     <?php 
-        $dividendo = $_SERVER["num_1"] ?? 1;
-        $divisor = $_SERVER["num_2"] ?? 1;        
+        $dividendo = $_SERVER["num_1"] ?? 0;
+        $divisor = $_SERVER["num_2"] ?? 0;        
     ?>
     <main>
-        <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+        <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="get">
             <label for="dividendo">Dividendo</label>
             <input type="number" name="num_1" id="num_1" require value="<?=$dividendo?>">
             <label for="divisor">Divisor</label>
