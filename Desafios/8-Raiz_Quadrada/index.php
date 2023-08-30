@@ -8,8 +8,9 @@
 </head>
 <body>
     <main>
-        <form action="$_SERVER['']" method="get"></form>
-
+        <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="get">
+    
+    </form>
     </main>    
 </body>
 </html>
