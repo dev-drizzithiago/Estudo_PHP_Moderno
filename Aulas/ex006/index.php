@@ -9,8 +9,8 @@
 <body>
     <main>
         <?php 
-            $v1 = $_REQUEST["v1"] ?? 0;
-            $v2 = $_REQUEST["v2"] ?? 0;
+            $v1 = $_POST["v1"] ?? 0;
+            $v2 = $_POST["v2"] ?? 0;
             $soma = $v1 + $v2;
         ?>
         <form action="<?php echo $_SERVER["SCRIPT_NAME"]?>" method="post">
