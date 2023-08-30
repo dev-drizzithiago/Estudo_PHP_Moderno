@@ -8,22 +8,25 @@
 </head>
 <body>
     <?php 
-        $salario = $_REQUEST["salario"] ?? 0.00;
-        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);        
-        $salario_minimo = $salario / 1380.00;
-        $_salario_int = (int) $salario_minimo;  
-        $_sobra_salario = $salario - 1380.00;
+        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY); 
+        
+        $salario = $_GET["_salario"] ?? 0.00;               
+        $salario_minimo = $salario / 1380;        
+        $_salario_int = (int) $salario_minimo;
+        $salario_x_min = $_salario_int * 1380;
+        $_sobra_salario = $salario - $salario_x_min;
+        
     ?>
     <main>
-        <form action="" method="$_POST">
+        <form action="" method="$_GET">
             <label for="sal">Salário(R$)</label>
-            <input type="number" name="salario" id="salario" step="0.01">
+            <input type="number" name="_salario" id="_salario" step="0.01">
             <label for="min">Considerando salário minimo de R$1.380,00</label>
             <input type="submit" value="Calcular">            
         </form>
         <section>
             <label for="resp">Resultado final...</label></br>
-            <?="Quem recebe um salário de ". numfmt_format_currency($padrao, $salario, "BRL"). ",</br> ganha ". $_salario_int. " minimos + $_sobra_salario"?>
+            <?="Quem recebe um salário de ". numfmt_format_currency($padrao, $salario, "BRL"). " </br> ganha ". $_salario_int. " minimos +". numfmt_create($padrao, $_sobra_salario, "BRL")?>
         </section>
     </main>    
 </body>
