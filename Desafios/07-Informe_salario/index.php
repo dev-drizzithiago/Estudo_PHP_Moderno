@@ -8,14 +8,12 @@
 </head>
 <body>
     <?php 
-        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY); 
-        
-        $salario = $_GET["_salario"] ?? 0.00;               
+        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);        
+        $salario = $_GET["_salario"] ?? 0.00;
         $salario_minimo = $salario / 1380;        
         $_salario_int = (int) $salario_minimo;
         $salario_x_min = $_salario_int * 1380;
-        $_sobra_salario = $salario - $salario_x_min;
-        
+        $_sobra_salario = $salario - $salario_x_min;        
     ?>
     <main>
         <form action="" method="$_GET">
