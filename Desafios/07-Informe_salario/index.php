@@ -16,9 +16,9 @@
         $_sobra_salario = $salario - $salario_x_min;        
     ?>
     <main>
-        <form action="" method="$_GET">
+        <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="$_GET">
             <label for="sal">Salário(R$)</label>
-            <input type="number" name="_salario" id="_salario" step="0.01">
+            <input type="number" name="_salario" id="_salario" step="0.01" value="<?=$salario?>">
             <label for="min">Considerando salário minimo de R$1.380,00</label>
             <input type="submit" value="Calcular">            
         </form>
