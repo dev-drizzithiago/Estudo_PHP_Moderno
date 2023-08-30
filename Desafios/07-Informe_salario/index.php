@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php 
+        $salario = $_REQUEST["salario"] ?? 0.00;
+        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
+        $salario_minimo = 1380.00
+    ?>
     <main>
         <form action="" method="$_POST">
             <label for="sal">Salário(R$)</label>
@@ -16,7 +21,7 @@
         </form>
         <section>
             <label for="resp">Resultado final...</label>
-            <?="<p>Você que recebe o salário de</p>". ?>
+            <?="<p>Considerando que quem recebe o salário de </p>". numfmt_format_currency($padrao, $salario, "BRL"). "Você recebe ". $ ?>
         </section>
     </main>    
 </body>
