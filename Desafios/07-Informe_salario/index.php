@@ -26,7 +26,7 @@
         </form>
         <section>
             <label for="resp">Resultado final...</label></br>
-            <?="Quem recebe um salário de ". numfmt_format_currency($padrao, $salario, "BRL"). " </br> ganha ". $_salario_int. " minimos +". numfmt_create($padrao, $_sobra_salario, "BRL")?>
+            <?="Quem recebe um salário de ". numfmt_format_currency($padrao, $salario, "BRL"). " </br> ganha ". $_salario_int. " minimos + ". numfmt_format_currency($padrao, $_sobra_salario, "BRL")?>
         </section>
     </main>    
 </body>
