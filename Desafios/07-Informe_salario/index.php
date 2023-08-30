@@ -20,8 +20,8 @@
             <input type="submit" value="Calcular">            
         </form>
         <section>
-            <label for="resp">Resultado final...</label>
-            <?="<p>Considerando que quem recebe o salário de </p>". numfmt_format_currency($padrao, $salario, "BRL"). "Você recebe ". $salario_minimo ?>
+            <label for="resp">Resultado final...</label></br>
+            <?="Quem recebe um salário de ". numfmt_format_currency($padrao, $salario, "BRL"). ",</br> ganha ". $salario_minimo?>
         </section>
     </main>    
 </body>
