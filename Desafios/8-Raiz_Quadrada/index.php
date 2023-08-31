@@ -13,12 +13,14 @@
         $raiz_x_3 = $valor_raiz ** (1/3);
     ?>
     <main>
+        <h1>Informe um número</h1>
         <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="get">
         <label for="_raiz">Número </label>
         <input type="number" name="_raiz_" id="_raiz_" require value="<?=$valor_raiz?>">
         <input type="submit" value="Calcular RAÍZE">
     </form>
-        <h1>Analisando o número <?=$valor_raiz?></h1>
+        <h1>Resultado final</h1>
+        <p>Analisando o <strong> número <?=$valor_raiz?></strong> temos:</p>
         <?="<p>A sua raiz <strong>QUADRADA</strong> é <i>". number_format($raiz_x_2, 3). "</i></p>"?>
         <?="<p>A sua raiz <strong>CÚBICA</strong> é <i>". number_format($raiz_x_3, 3). "</i></p>"?>
     </main> 
