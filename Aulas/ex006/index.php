@@ -13,7 +13,7 @@
             $v2 = $_POST["v2"] ?? 0;
             $soma = $v1 + $v2;
         ?>
-        <form action="<?php echo $_SERVER["SCRIPT_NAME"]?>" method="post">
+        <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="post">
             <label for="v1">Valor 1</label>
             <input type="number" name="v1", id="v1" value="<?=$v1?>">
             <label for="v2">Valor 2</label>
