@@ -9,7 +9,7 @@
 <body>
     <?php
         $_ano_atual_sistema = date("Y");
-        $_ano_nasc = $_GET["ano_nasc"] ?? 1900;
+        $_ano_nasc = $_GET["ano_nasc"] ?? 1982;
         $_ano_atual = $_GET["ano_atual"] ?? $_ano_atual_sistema;
         $_calc_idade = $_ano_atual - $_ano_nasc;           
     ?>
