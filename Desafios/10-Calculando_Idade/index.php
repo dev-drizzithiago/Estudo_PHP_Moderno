@@ -22,8 +22,8 @@
             <input type="number" name="ano_atual" id="ano_atual" value="<?=$_ano_atual_sistema?>">
             <input type="submit" value="Qual sera minha idade?">
         </form>    
-    <h1>Resultado!</h1>
-    <?php 
+    <?php
+        echo "<h1>Resultado!</h1>";
         echo "<p>Quem nasceu no ano de <strong><i>$_ano_nasc</i></strong> vai ter $_calc_idade em <strong>$_ano_atual</strong></p>";
     ?>
     </main>    
