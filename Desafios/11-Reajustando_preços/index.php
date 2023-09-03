@@ -9,17 +9,21 @@
 <body>
     <?php 
         $_valor_preco = $_REQUEST["preco"] ?? 0;
-        $_valor_percentagem = $_REQUEST["_%%"] ?? 0;    
+        $_valor_percentagem = $_REQUEST["_%%"] ?? 0;
+        $_valor_reajuste = $_valor_preco + ($_valor_preco * $_valor_percentagem / 100);
     ?>
     <main>
         <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="get">
         <label for="preco">Preço do produto(R$)</label>
-        <input type="number" name="preco" id="preco">
-        <label for="porcentual">Qual será o percentual de rajuste? <?="($_valor_percentagem)"?></label>
+        <input type="number" name="preco" id="preco" value="<?=$_valor_preco?>">
+        <?="<label for='porcentual'>Qual será o percentual de rajuste?($_valor_percentagem)</label>"?>
         <input type="range" name="_%%" id="_%%" min="0" max="100">        
         <input type="submit" value="Reajustar">
         <input type="reset" value="Limpar">
         </form>
+    <?php 
+        echo "$_valor_reajuste "    
+    ?>
     </main>    
 </body>
 </html>
