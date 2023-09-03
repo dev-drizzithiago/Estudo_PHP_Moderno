@@ -20,6 +20,7 @@
         <input type="range" name="_%%" id="_%%" min="1" max="100" value="<?=$_valor_percentagem?>">        
         <input type="submit" value="Reajustar">
         </form>
+        <h1>Resultado do Reajuste!</h1>
     <?php 
         echo "O produto custava R$<strong>". number_format($_valor_preco, 2, ",", "."). "</strong>, com <i><strong>$_valor_percentagem%</strong></i> de aumento vai passar a custar R$<strong>". number_format($_valor_reajuste, 2, ",", "."). "</strong> a partir de agora.";
     ?>
