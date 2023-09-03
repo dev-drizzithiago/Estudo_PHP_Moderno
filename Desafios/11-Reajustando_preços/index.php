@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php 
-        $_valor_preco = $_REQUEST["preco"] ?? 0;
-        $_valor_percentagem = $_REQUEST["_%%"] ?? 0;
+        $_valor_preco = $_GET["preco"] ?? 1;
+        $_valor_percentagem = $_GET["_%%"] ?? 50;
         $_valor_reajuste = $_valor_preco + ($_valor_preco * $_valor_percentagem / 100);
     ?>
     <main>
@@ -17,12 +17,11 @@
         <label for="preco">Preço do produto(R$)</label>
         <input type="number" name="preco" id="preco" value="<?=$_valor_preco?>">
         <?="<label for='porcentual'>Qual será o percentual de rajuste?($_valor_percentagem)</label>"?>
-        <input type="range" name="_%%" id="_%%" min="0" max="100">        
+        <input type="range" name="_%%" id="_%%" min="1" max="100" value="<?=$_valor_percentagem?>">        
         <input type="submit" value="Reajustar">
-        <input type="reset" value="Limpar">
         </form>
     <?php 
-        echo "$_valor_reajuste "    
+        echo "O produto custava R$<strong>". number_format($_valor_preco, 2, ",", "."). "</strong>, com <i><strong>$_valor_percentagem%</strong></i> de aumento vai passar a custar R$<strong>". number_format($_valor_reajuste, 2, ",", "."). "</strong> a partir de agora.";
     ?>
     </main>    
 </body>
