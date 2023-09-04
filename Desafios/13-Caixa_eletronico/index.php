@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1 align="center">Caixa eletronico</h1>
+    <h1>Caixa eletronico</h1>
+    <main>        
         <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="get">
         <label for="caixa">Qual valor deseja sacar? (R$)</label>
         <input type="number" name="moeda" id="moeda">
