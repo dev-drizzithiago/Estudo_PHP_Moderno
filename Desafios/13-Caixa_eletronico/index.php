@@ -8,10 +8,11 @@
 </head>
 <body>
     <main>
+        <h1 align="center">Caixa eletronico</h1>
         <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="get">
         <label for="caixa">Qual valor deseja sacar? (R$)</label>
         <input type="number" name="moeda" id="moeda">
-    
+        <input type="submit" value="Sacar">
     </form>
     </main>    
 </body>
