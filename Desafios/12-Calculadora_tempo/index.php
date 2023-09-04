@@ -9,11 +9,11 @@
 <body>
     <?php 
         $_segundos = $_REQUEST["secund"] ?? 0;
-        $_calc_semanas = $_segundos / 10080;
-        $_calc_dias = $_segundos / 1440;
-        $_calc_horas = $_segundos / 3600;
-        $_calc_minutos = $_segundos / 60;
-        $_calc_segundos = $_segundos;        
+        $_calc_segundos = $_segundos;
+        $_calc_minutos = ($_segundos / 60);
+        $_calc_horas = ($_segundos / 3600);
+        $_calc_dias = ($_segundos / 86400) ;
+        $_calc_semanas = ($_segundos / 604800);        
     ?>
     <main>
         <h1>Caculadora de Tempo</h1>
@@ -23,12 +23,12 @@
             <input type="submit" value="Calcular">
         </form>
         <h1>Totalizando tudo...</h1>
-        <p>Analisando o valor que você digitou, <?=$_segundos?> segundos equivalem a um total de:</p>
+        <p>Analisando o valor que você digitou, <?=number_format($_segundos, 0, ",", ".")?> segundos equivalem a um total de:</p>
         <ul>
             <li><?=number_format($_calc_semanas, 0, ",", ".")?> semanas </li>
             <li><?=number_format($_calc_dias, 0, ",", ".")?> dias </li>
             <li><?=number_format($_calc_horas, 0, ",", ".")?> horas </li>
-            <li><?=number_format($_calc_minutos,0 , ",", ".")?> minutos</li>
+            <li><?=number_format($_calc_minutos, 0, ",", ".")?> minutos</li>
             <li><?=number_format($_calc_segundos, 0, ",", ".")?> segundos </li>
         </ul>
     </main>
