@@ -14,7 +14,6 @@
     $_20 = 20;
     $_10 = 10;
     $_5 = 5;
-
     // Valor do saque
     $_valor_saque = $_REQUEST["moeda"] ?? 0.00;
 ?>
