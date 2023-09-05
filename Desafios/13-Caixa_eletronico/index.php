@@ -6,10 +6,10 @@
     <title>Caixa Eletronico</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<?php   
-    
+<?php    
     // Valor do saque
     $_valor_saque = $_REQUEST["moeda"] ?? 0.00;
+    if ($_valor_saque )
 ?>
 <body>
     <main>
