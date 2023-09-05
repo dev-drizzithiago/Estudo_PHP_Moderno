@@ -23,11 +23,11 @@
     <h2 align="center">Saque de R$<?=$_valor_saque?> realizado</h2>
     <p>O caixa eletronica vai te entregar as seguintes notas:</p>
         <ul>
-            <li>R$ 10,00</li> <?=?>
-            <li>R$ 20,00</li> <?=?>
-            <li>R$ 50,00</li> <?=?>
-            <li>R$ 100,00</li> <?=?>
-            <li>R$ 200,00</li> <?=?>
+            <li>R$ 10,00</li> 
+            <li>R$ 20,00</li> 
+            <li>R$ 50,00</li> 
+            <li>R$ 100,00</li> 
+            <li>R$ 200,00</li> 
         </ul>
     
     </main>
