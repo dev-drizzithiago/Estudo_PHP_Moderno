@@ -6,13 +6,8 @@
     <title>Caixa Eletronico</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<?php 
-    //notas disponiveis
-    $_200 = 200;
-    $_100 = 100;
-    $_50 = 50;
-    $_20 = 20;
-    $_10 = 10;
+<?php   
+    
     // Valor do saque
     $_valor_saque = $_REQUEST["moeda"] ?? 0.00;
 ?>
@@ -21,6 +16,7 @@
     <h1 align="center">Caixa eletronico</h1>
         <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="get">
         <label for="caixa">Qual valor deseja sacar? (R$)</label>
+        <p>* Notas disponiveis: R$200, R$100, R$50, R$20, R$10</p>
         <input type="number" name="moeda" id="moeda">
         <input type="submit" value="Sacar">
     </form>
@@ -32,7 +28,8 @@
             <li>R$ 50,00</li> <?=?>
             <li>R$ 100,00</li> <?=?>
             <li>R$ 200,00</li> <?=?>
-        </ul>        
+        </ul>
+    
     </main>
 </body>
 </html>
