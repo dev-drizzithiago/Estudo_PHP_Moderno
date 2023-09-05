@@ -8,10 +8,10 @@
 </head>
 <?php 
     //notas disponiveis
-    $_200 = 2;
-    $_100 = 5;
-    $_50 = 2;
-    $_20 = 4;
+    $_200 = 200;
+    $_100 = 100;
+    $_50 = 50;
+    $_20 = 20;
     $_10 = 10;
     $_5 = 5;
 
@@ -27,14 +27,24 @@
         <input type="submit" value="Sacar">
     </form>
     <h2 align="center">Saque de R$<?=$_valor_saque?> realizado</h2>
-        <ol type="disc">
+    <p>O caixa eletronica vai te entregar as seguintes notas:</p>
+        <ul>
+            <li>R$ 5,00</li> <?=?>
+            <li>R$ 10,00</li> <?=?>
+            <li>R$ 20,00</li> <?=?>
+            <li>R$ 50,00</li> <?=?>
+            <li>R$ 100,00</li> <?=?>
+            <li>R$ 200,00</li> <?=?>
+        </ul>        
+    </main>
+</body>
+</html>
+
+<!--<ol type="disc">
             <li><a href="./img/_5_reais.jpg"></a></li>
             <li><a href="./img/_10reais.jpg"></a></li>
             <li><a href="./img/_20_reais.jpg"></a></li>
             <li><a href="./img/_50_reais.jpg"></a></li>
             <li><a href="./img/_100_reais.jpg"></a></li>
             <li><a href="./img/_200_reais.jpg"></a></li>
-        </ol>
-    </main>
-</body>
-</html>
+        </ol>-->
