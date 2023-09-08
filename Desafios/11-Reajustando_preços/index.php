@@ -9,21 +9,27 @@
 <body>
     <?php 
         $_valor_preco = $_GET["preco"] ?? 1;
-        $_valor_percentagem = $_GET["_%%"] ?? 50;
+        $_valor_percentagem = $_GET["reaj"] ?? 50;
         $_valor_reajuste = $_valor_preco + ($_valor_preco * $_valor_percentagem / 100);
     ?>
     <main>
         <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="get">
         <label for="preco">Preço do produto(R$)</label>
         <input type="number" name="preco" id="preco" value="<?=$_valor_preco?>">
-        <?="<label for='porcentual'>Qual será o percentual de rajuste?($_valor_percentagem)</label>"?>
-        <input type="range" name="_%%" id="_%%" min="1" max="100" value="<?=$_valor_percentagem?>">        
+        <label for='reaj'>Qual será o percentual de rajuste?(<strong><span id="porc">?</span>%</strong>)</label>
+        <input type="range" name="reaj" id="reaj" min="1" max="100" step="1" oninput="mudaValor()">
         <input type="submit" value="Reajustar">
         </form>
         <h1>Resultado do Reajuste!</h1>
     <?php 
-        echo "O produto custava R$<strong>". number_format($_valor_preco, 2, ",", "."). "</strong>, com <i><strong>$_valor_percentagem%</strong></i> de aumento vai passar a custar R$<strong>". number_format($_valor_reajuste, 2, ",", "."). "</strong> a partir de agora.";
+        echo "O produto custava R$<strong>". number_format($_valor_preco, 2, ",", "."). "</strong>, com <i><strong>$_valor_percentagem%</strong></i> de aumento vai passar a custar R$<strong>". number_format($_valor_reajuste, 2, ",", "."). "</strong> a partir de agora.";       
     ?>
-    </main>    
+    </main>
+    <script>
+         mudaValor();
+        function mudaValor() {
+            p.innerText = reaj.value;
+        }
+    </script>
 </body>
 </html>
