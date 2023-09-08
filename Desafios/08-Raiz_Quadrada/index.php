@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-        $valor_raiz = $_REQUEST["_raiz_"] ?? 1;
+        $valor_raiz = $_REQUEST["_raiz_"] ?? 0;
         $raiz_x_2 = $valor_raiz ** (1/2);
         $raiz_x_3 = $valor_raiz ** (1/3);
     ?>
@@ -20,7 +20,7 @@
         <input type="submit" value="Calcular RAÍZE">
     </form>
         <h1>Resultado final</h1>
-        <p>Analisando o <strong> número <?=$valor_raiz?></strong> temos:</p>
+        <p>Analisando o <strong> número "<?=$valor_raiz?></strong>" temos:</p>
         <?="<p>A sua raiz <strong>QUADRADA</strong> é <i>". number_format($raiz_x_2, 3). "</i></p>"?>
         <?="<p>A sua raiz <strong>CÚBICA</strong> é <i>". number_format($raiz_x_3, 3). "</i></p>"?>
     </main> 
