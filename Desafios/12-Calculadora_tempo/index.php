@@ -30,13 +30,13 @@
             <input type="submit" value="Calcular">
         </form>
         <h1>Totalizando tudo...</h1>
-        <p>Analisando o valor que você digitou, <?=number_format($_segundos, 0, ",", ".")?> segundos equivalem a um total de:</p>
+        <p>Analisando o valor que você digitou,  <strong><i><?=number_format($_segundos, 0, ",", ".")?></i></strong> segundos equivalem a um total de:</p>
         <ul>
-            <li><?=number_format($_calc_semanas, 0, ",", ".")?> semanas </li>
-            <li><?=number_format($_calc_dias, 0, ",", ".")?> dias </li>
-            <li><?=number_format($_calc_horas, 0, ",", ".")?> horas </li>
-            <li><?=number_format($_calc_minutos, 0, ",", ".")?> minutos</li>
-            <li><?=number_format($_calc_segundos, 0, ",", ".")?> segundos </li>
+            <li id="italico"><strong><?=number_format($_calc_semanas, 0, ",", ".")?> Semanas</strong> </li>
+            <li id="italico"><strong><?=number_format($_calc_dias, 0, ",", ".")?> Dias</strong> </li>
+            <li id="italico"><strong><?=number_format($_calc_horas, 0, ",", ".")?> Horas</strong></li>
+            <li id="italico"><strong><?=number_format($_calc_minutos, 0, ",", ".")?> Minutos</strong></li>
+            <li id="italico"><strong><?=number_format($_calc_segundos, 0, ",", ".")?> Segundos</strong></li>
         </ul>
     </main>
 </body>
