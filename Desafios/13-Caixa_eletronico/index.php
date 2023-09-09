@@ -9,7 +9,8 @@
     <?php    
         // Valor do saque
         $_valor_saque = $_REQUEST["moeda"] ?? 0.00;
-        $_sobra = $_valor_saque;
+        $_sobra = (int) $_valor_saque;
+
         //saque 200
         $_valor_200 = (int) ($_sobra / 200);
         $_sobra %= 200;
@@ -40,17 +41,18 @@
         <form action="<?=$_SERVER["SCRIPT_NAME"]?>" method="get">
         <label for="caixa">Qual valor deseja sacar? (R$)</label>
         <p>* Notas disponiveis: R$200, R$100, R$50, R$20, R$10</p>
-        <input type="number" name="moeda" id="moeda">
+        <input type="number" name="moeda" id="moeda" min="5.00" step="0.01" value="<?=$_valor_saque?>">
         <input type="submit" value="Sacar">
     </form>
     <h2 align="center">Saque de R$<?=$_valor_saque?> realizado</h2>
     <p>O caixa eletronica vai te entregar as seguintes notas:</p>
         <ul>
-            <li>R$ 10,00</li> 
-            <li>R$ 20,00</li> 
-            <li>R$ 50,00</li> 
-            <li>R$ 100,00</li> 
-            <li>R$ 200,00</li> 
+            <!--li>R$ 200,00</li--> 
+            <li>R$ 100,00</li> <?="x = ".$_valor_100?>
+            <li>R$ 50,00</li> <?="x = ".$_valor_50?>
+            <li>R$ 20,00</li> <?="x = ".$_valor_20?>
+            <li>R$ 10,00</li> <?="x = ".$_valor_10?>
+            <li>R$ 5,00</li> <?="x = ".$_valor_5?>
         </ul>
     
     </main>
