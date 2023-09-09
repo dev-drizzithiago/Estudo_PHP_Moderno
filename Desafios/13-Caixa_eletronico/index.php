@@ -10,7 +10,6 @@
             height: 100px;
             border: 1px 1px 1px black;
         }
-
     </style>
 </head>
     <?php    
@@ -21,23 +20,18 @@
         //saque 200
        // $_valor_200 = (int) ($_sobra / 200);
        // $_sobra %= 200;
-
         //saque 100
         $_valor_100 = (int) ($_sobra / 100);
         $_sobra %= 100;
-
         //saque 50
         $_valor_50 = (int) ($_sobra / 50);
         $_sobra %= 50;
-
         //saque 20
         $_valor_20 = (int) ($_sobra / 20);
         $_sobra %= 20;
-
         //saque 10
         $_valor_10 = (int) ($_sobra / 10);
         $_sobra %= 10;
-
         //saque 5
         $_valor_5 = (int) ($_sobra / 5);
         $_sobra %= 5;
